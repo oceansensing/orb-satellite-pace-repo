@@ -23,4 +23,5 @@ per fetcher family, instead of naming packages in its own `pip install`
 line. Dependabot reads requirements files and never a workflow line: an
 inline pin elsewhere had carried `requests` 2.32.3, a version with two
 advisories, unflagged. The site's `check:docs` now refuses an inline package
-here. Confirmed by a dispatched run, green on build, Pages and R2.
+here. Not yet run here: this repository publishes nothing until PACE is live on
+the server, so no run has been dispatched.
