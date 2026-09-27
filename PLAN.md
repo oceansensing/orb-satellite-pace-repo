@@ -15,3 +15,12 @@ The University of Delaware's Ocean Remote sensing laboratory (ORB) serves its pr
 
 1. Watch the server for live PACE data (`allDatasets` lists each dataset's time span).
 2. Then: products in the site's contract, `products.toml`, rehearse, dispatch, schedule.
+
+## The workflow's packages come from the site — 2026-09-27
+
+The publish workflow installs `site/scripts/requirements-erddap.txt`, one file
+per fetcher family, instead of naming packages in its own `pip install`
+line. Dependabot reads requirements files and never a workflow line: an
+inline pin elsewhere had carried `requests` 2.32.3, a version with two
+advisories, unflagged. The site's `check:docs` now refuses an inline package
+here. Confirmed by a dispatched run, green on build, Pages and R2.
